@@ -27,11 +27,15 @@ int main(void)
     printf("Período: %d\n", periodo);
     printf("Nota: %.2f\n", nota_estrutura);
 
-    if (nota_estrutura >= 7.0) {
+    if (nota_estrutura >= 9.0) {
+        printf("Parabéns tirou um notão em! Foi aprovado com folga espertão\n");
+    }
+    else if (nota_estrutura >= 7.0) {
         printf("Parabéns! Você foi aprovado em estrutura de dados.\n");
+    } else if (nota_estrutura >= 5.0) {
+        printf("Infelizmente, você está de recuperção em estrutura de dados.\n");
     } else {
-
-        printf("Infelizmente, você não foi aprovado em estrutura de dados.\n");
+        printf("Reprovado, sem solução mano\n");
     }
 
     return 0;
