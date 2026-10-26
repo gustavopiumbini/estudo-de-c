@@ -28,8 +28,21 @@ int main(void)
 
     primeiro->proximo = segundo;
 
+    No *terceiro = malloc(sizeof(No));
+    if (terceiro == NULL) {
+        free(segundo);
+        free(primeiro);
+        return 1;
+    }
+
+    terceiro->valor = 30;
+    terceiro->proximo = NULL;
+
+    segundo->proximo = terceiro;
+
     printf("%d\n", primeiro->proximo->valor);
 
+    free(terceiro);
     free(segundo);
     free(primeiro);
     return 0;
